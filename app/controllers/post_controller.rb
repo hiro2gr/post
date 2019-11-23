@@ -1,7 +1,7 @@
 class PostController < ApplicationController
   def create
-    @article = Article.new(content: params[:article])
-    @artcle.save
+    @article = Article.new(content: params[:content])
+    @article.save
     redirect_to("/")
   end
 
