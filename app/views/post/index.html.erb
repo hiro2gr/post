@@ -1,0 +1,6 @@
+<% @articles.each do |article| %>
+    <p><%= article.content %></p>
+    <%= link_to '詳細へ', "/post/#{article.id}" %>
+<% end %>
+
+<%= link_to 'ホームへ戻る', "/" %>
