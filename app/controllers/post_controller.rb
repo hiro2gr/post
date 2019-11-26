@@ -2,7 +2,7 @@ class PostController < ApplicationController
   def create
     @article = Article.new(content: params[:content])
     @article.save
-    redirect_to("/post/index")
+    redirect_to("/")
   end
 
   def new
@@ -20,7 +20,7 @@ class PostController < ApplicationController
   def destroy
     @article = Article.find_by(id: params[:id])
     @article.destroy
-    redirect_to("/post/index")
+    redirect_to :action => "index"
   end
 
   def edit
