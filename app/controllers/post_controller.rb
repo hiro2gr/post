@@ -22,4 +22,14 @@ class PostController < ApplicationController
     @article.destroy
     redirect_to("/post/index")
   end
+
+  def edit
+    @article = Article.find_by(id: params[:id])
+  end
+
+  def update
+    @article = Article.find_by(id: params[:id])
+    @article.update_columns(content: params[:content])
+    redirect_to :action => "index"
+  end
 end

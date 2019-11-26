@@ -1,8 +1,10 @@
+<h1>詳細画面</h1>
+
 <p>ID</p>
 <%= @article.id %>
 <p>content</p>
 <%= @article.content %>
 <p></p>
 <%= link_to "削除する", "/post/#{@article.id}/destroy", data: { confirm: '本当に削除しますか?' }, method: :post %>
-
-<%= link_to "投稿一覧へ", "/post/index" %>
+<%= link_to "編集する", "/post/#{@article.id}/edit" %>
+<%= link_to "投稿一覧へ", "/post" %>

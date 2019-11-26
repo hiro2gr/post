@@ -1,0 +1,10 @@
+<h1>編集</h1>
+
+<h3><%= @article.content %></h3>
+
+<%= form_tag("/post/#{@article.id}/update") do %>
+    <textarea name="content"></textarea>
+    <input type="submit" value="編集する">
+<% end %>
+
+<%= link_to 'ホームへ戻る', "/" %>
